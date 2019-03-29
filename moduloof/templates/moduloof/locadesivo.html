@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Orçamento Adesivo Flexo</title>
+</head>
+<body>
+    <h1>Listagem dos Orçamentos Adesivo Flexo</h1>
+        <ul>
+        {% for v in listagem %}
+        <li>{{ v.id }} - {{ v.cliente }} - {{ v.servico }} - {{ v.quantidade }} - <a href="{% url 'url_cons_ocadesivo' v.id %}">Consultar</a></li>
+        {% endfor %}
+        </ul>
+    <br>
+    <a href="{% url 'url_novo_ocadesivo' %}">Novo</a> - <a href="{% url 'url_home' %}">Inicio</a>
+</body>
+</html>

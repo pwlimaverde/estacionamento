@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Orçamento Filme</title>
+</head>
+<body>
+    <form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Salvar</button> - <a href="{% url 'url_lfilme' %}">Listagem</a> - <a href="{% url 'url_home' %}">Inicio</a>
+    <br>
+    <h5>Quantidade Mínima: {{ quantmi }}</h5>
+    <h2>Valores:</h2>
+    <h4>Quantidade: {{ quanta }}</h4>
+    Peso: {{ totalp_a }} kg - Valor do kg: {{ vaa }}
+    <br>
+    Valor unitário: {{ valor_a }} R$
+    <br>
+    Total: {{ total_a }} R$
+    <br>
+    <br>
+    <h4>Quantidade: {{ quantb }}</h4>
+    Peso: {{ totalp_b }} kg - Valor do kg: {{ vab }}
+    <br>
+    Valor unitário: {{ valor_b }} R$
+    <br>
+    Total: {{ total_b }} R$
+    <br>
+    <br>
+    <h4>Quantidade: {{ quantc }}</h4>
+    Peso: {{ totalp_c }} kg - Valor do kg: {{ vac }}
+    <br>
+    Valor unitário: {{ valor_c }} R$
+    <br>
+    Total: {{ total_c }} R$
+    <br>
+    <br>
+    <br>
+    </form>
+</body>
+</html>
